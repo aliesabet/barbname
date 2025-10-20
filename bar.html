@@ -1,103 +1,146 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/bar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فرم بارنامه</title>
+  <link rel="stylesheet" href="bar.css">
+  
+
 </head>
 <body>
-  <h2>بارنامه</h2>
-    <form>
+  <div class="container">
+    <h2 class="header">بارنامه</h2>
+    <form id="bar-form">
+
+      <div class="field-inline">
         <label for="date">تاریخ:</label>
-          <input type="date" id="date" name="date">
+        <input type="text" id="date" name="date">
+      </div>
 
+      <fieldset>
+        <legend>مشخصات کالا</legend>
+        <div class="field-inline">
+          <label for="goods_name">نام کالا:</label>
+          <input type="text" id="goods_name" name="goods_name">
+          <label for="goods_code">کد کالا:</label>
+          <input type="text" id="goods_code" name="goods_code">
+        </div>
+      </fieldset>
 
-<fieldset>
-  <legend>مشخصات کالا</legend>
-  
-        <label for="goods_name">نام کالا:</label>
-        <input type="text" id="goods_name" name="goods_name">
-
-        <label for="goods_code">کد کالا:</label>
-        <input type="text" id="goods_code" name="goods_code">
-</fieldset>
-       
-<fieldset>
-  <legend>مشخصات فرستنده</legend>
-   <label> نام فرستنده:</label>
-        <strong>محسن ولیجانی</strong>
+      <fieldset>
+        <legend>مشخصات فرستنده</legend>
+        <div class="field-inline">
+          <label>نام فرستنده:</label>
+          <strong>محسن ولیجانی</strong>
           <label for="sender_code_melli">کد ملی:</label>
-        <input type="text" id="sender_code_melli" name="sender_code_melli">
-        <label>شماره همراه:</label>
-        <strong>09171529707</strong>
-</fieldset>
-<fieldset>
-  <legend>مشخصات گیرنده</legend>
-        <label for="receiver_name">نام گیرنده:</label>
-        <input type="text" id="receiver_name" name="receiver_name">
+          <input type="text" id="sender_code_melli" name="sender_code_melli">
+          <label>شماره همراه:</label>
+          <strong>09171529707</strong>
+        </div>
+      </fieldset>
 
-        <label for="receiver_code_melli">کد ملی:</label>
-        <input type="text" id="receiver_code_melli" name="receiver_code_melli">
+      <fieldset>
+        <legend>مشخصات گیرنده</legend>
+        <div class="field-inline">
+          <label for="receiver_name">نام گیرنده:</label>
+          <input type="text" id="receiver_name" name="receiver_name">
+          <label for="receiver_code_melli">کد ملی:</label>
+          <input type="text" id="receiver_code_melli" name="receiver_code_melli">
+          <label for="receiver_phone">شماره همراه:</label>
+          <input type="text" id="receiver_phone" name="receiver_phone">
+        </div>
+      </fieldset>
 
-        <label for="receiver_phone">شماره همراه:</label>
-        <input type="text" id="receiver_phone" name="receiver_phone">
-        
-</fieldset>
-
-       <fieldset>
+      <fieldset>
         <legend>مشخصات راننده</legend>
-            <label for="ranande_name">نام راننده:</label>
-            <input type="text" id="ranande_name" name="ranande_name">
-            <label for="driver_code_melli">کد ملی:</label>
-            <input type="text" id="driver_code_melli" name="driver_code_melli">
-
-        <label for="driver_phone">شماره همراه:</label>
-        <input type="text" id="driver_phone" name="driver_phone">
-
-       </fieldset> 
+        <div class="field-inline">
+          <label for="ranande_name">نام راننده:</label>
+          <input type="text" id="ranande_name" name="ranande_name">
+          <label for="driver_code_melli">کد ملی:</label>
+          <input type="text" id="driver_code_melli" name="driver_code_melli">
+          <label for="driver_phone">شماره همراه:</label>
+          <input type="text" id="driver_phone" name="driver_phone">
+        </div>
+      </fieldset>
 
       <fieldset>
         <legend>مشخصات باربری و وسیله نقلیه</legend>
-<label for="barbari_name">نام باربری:</label>
-        <input type="text" id="barbari_name" name="barbari_name">
-
-        <label for="barname_number">شماره بارنامه:</label>
-        <input type="number" id="barname_number" name="barname_number">
-
-        <label for="kind_of_vehicle">نوع کامیون:</label>
-        <input type="text" id="kind_of_vehicle" name="kind_of_vehicle">
-
-        <label for="vehicle_number">شماره کامیون:</label>
-        <input type="number" id="vehicle_number" name="vehicle_number">
-
+        <div class="field-inline">
+          <label for="barbari_name">نام باربری:</label>
+          <input type="text" id="barbari_name" name="barbari_name">
+          <label for="barname_number">شماره بارنامه:</label>
+          <input type="text" id="barname_number" name="barname_number">
+          <label for="kind_of_vehicle">نوع کامیون:</label>
+          <input type="text" id="kind_of_vehicle" name="kind_of_vehicle">
+          <label for="vehicle_number">شماره کامیون:</label>
+          <input type="text" id="vehicle_number" name="vehicle_number">
+        </div>
       </fieldset>
+
         <fieldset>
-        <legend>مشخصات بارگیری و تخلیه</legend>
-<label for="weight_start">وزن کالا در محل بارگیری پیوست قبض باسکول:</label>
-        <input type="number" id="weight_start" name="weight_start">
-
-        <label for="weight_end">وزن کالا در محل تخلیه پیوست قبض باسکول :</label>
-        <input type="number" id="weight_end" name="weight_end">
-
-        <label for="loading_place">محل بارگیری:</label>
-        <input type="text" id="loading_place" name="loading_place">
-
-        <label for="unloading_place">محل تخلیه:</label>
-        <input type="text" id="unloading_place" name="unloading_place">
+          <legend>مشخصات بذر</legend>
+          <div class="seed-row field-inline">
+            <label>نوع بذر ۱:</label>
+            <input type="text" name="seed_type_1">
+            <label>تعداد کیسه:</label>
+            <input type="text" name="seed_count_1">
+          </div>
+          <div class="seed-row field-inline">
+            <label>نوع بذر ۲:</label>
+            <input type="text" name="seed_type_2">
+            <label>تعداد کیسه:</label>
+            <input type="text" name="seed_count_2">
+          </div>
+          <div class="seed-row field-inline">
+            <label>نوع بذر ۳:</label>
+            <input type="text" name="seed_type_3">
+            <label>تعداد کیسه:</label>
+            <input type="text" name="seed_count_3">
+          </div>
         </fieldset>
-        
-<fieldset>
-<label for="loading_responsible">مسئول بارگیری:</label>
-        <input type="text" id="loading_responsible" name="loading_responsible">
+         
+       
 
-        <label for="truck_driver">راننده کامیون:</label>
-        <input type="text" id="truck_driver" name="truck_driver">
+      <fieldset>
+        <legend>مشخصات بارگیری و تخلیه</legend>
+        <div class="field-inline">
+          <label for="weight_start">وزن کالا در محل بارگیری:</label>
+          <input type="text" id="weight_start" name="weight_start">
+        </div>
+        <div class="field-inline">
+          <label for="weight_end">وزن کالا در محل تخلیه:</label>
+          <input type="text" id="weight_end" name="weight_end">
+        </div>
+        <div class="field-inline">
+          <label for="loading_place">محل بارگیری:</label>
+          <input type="text" id="loading_place" name="loading_place">
+        </div>
+        <div class="field-inline">
+          <label for="unloading_place">محل تخلیه:</label>
+          <input type="text" id="unloading_place" name="unloading_place">
+        </div>
+      </fieldset>
 
-        <label for="goods_receiver">گیرنده کالا:</label>
-        <input type="text" id="goods_receiver" name="goods_receiver">
-</fieldset>
-        
+      <fieldset>
+        <div class="field-inline">
+          <label for="loading_responsible">مسئول بارگیری:</label>
+          <input type="text" id="loading_responsible" name="loading_responsible">
+          <label for="truck_driver">راننده کامیون:</label>
+          <input type="text" id="truck_driver" name="truck_driver">
+          <label for="goods_receiver">گیرنده کالا:</label>
+          <input type="text" id="goods_receiver" name="goods_receiver">
+        </div>
+      </fieldset>
+
     </form>
+
+    <div class="buttons print">
+      <button>🖨 چاپ فرم</button>
+      <button>📤 اشتراک‌گذاری</button>
+    </div>
+  </div>
+<script src="bar.js"></script>
+
 </body>
 </html>
