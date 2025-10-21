@@ -118,41 +118,102 @@ legend {
   }
 }
 
+/* 🎯 نسخه نهایی چاپ برای موبایل و دسکتاپ */
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
+
 @media print {
-  body {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: "Vazir", sans-serif;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    transform: scale(0.8);
+    transform: scale(0.95);
     transform-origin: top center;
   }
 
   .container {
     width: 100%;
-    max-width: 700px;
+    max-width: 190mm;
     margin: 0 auto;
+    box-shadow: none;
+    border: none;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
   }
 
   fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    page-break-inside: avoid;
   }
 
-  input, label, strong {
-    display: inline-block;
-    width: auto;
-    max-width: 45%;
-    vertical-align: middle;
+  legend {
+    font-weight: bold;
+    font-size: 13px;
   }
 
   .field-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  label, input, strong {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 3px 0;
+  }
+
+  label {
+    width: 25%;
+    font-weight: bold;
+  }
+
+  input, strong {
+    width: 25%;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: none;
+    padding: 2px 4px;
+  }
+
+  /* جلوگیری از شکستن بخش‌های مهم */
+  .field-inline, fieldset {
     page-break-inside: avoid;
   }
-  @page {
-  size: A4 portrait;
-  margin: 10mm;
+
+  /* دکمه‌ها حذف بشن در چاپ */
+  .buttons {
+    display: none !important;
+  }
+
+  /* فیلدهای عددی باریک‌تر بشن تا جا بشن */
+  input[type="number"] {
+    width: 20% !important;
+  }
+
+  /* بخش مسئولین همیشه در یک خط */
+  #loading_responsible, #truck_driver, #goods_receiver {
+    width: 30% !important;
+  }
 }
-}
+
 
  
 
