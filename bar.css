@@ -117,10 +117,7 @@ legend {
     align-items: stretch;
   }
 }
-@page {
-  size: A4 portrait;
-  margin: 10mm;
-}
+
 @media print {
   body { margin: 0; font-size: 11pt; }
   .buttons, .no-print { display: none; }
@@ -135,7 +132,10 @@ legend {
   fieldset:nth-of-type(5) .field-inline {
     flex-wrap: wrap; 
   }
-
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
   #barbari_name, #barname_number, #kind_of_vehicle, #vehicle_number {
     max-width: 120px;
   }
