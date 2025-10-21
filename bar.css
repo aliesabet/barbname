@@ -144,9 +144,10 @@ legend {
   fieldset:last-of-type .field-inline input { max-width: 120px; }
 
   h2 { font-size: 16pt; text-align: center; margin-bottom: 0.8rem; }
-}
- .field-inline {
+  .field-inline {
     page-break-inside: avoid;
   }
 
+}
+ 
 
