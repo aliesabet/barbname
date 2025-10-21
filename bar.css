@@ -117,6 +117,10 @@ legend {
     align-items: stretch;
   }
 }
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
 @media print {
   body { margin: 0; font-size: 11pt; }
   .buttons, .no-print { display: none; }
@@ -141,5 +145,8 @@ legend {
 
   h2 { font-size: 16pt; text-align: center; margin-bottom: 0.8rem; }
 }
+ .field-inline {
+    page-break-inside: avoid;
+  }
 
 
