@@ -1,5 +1,20 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: "Vazir", sans-serif;
+}
 .header {
   text-align: center;
+  margin-bottom:15px;
+  font-weight: bold;
+}
+.date{
+font-weight: bold;
 }
 
 input[type="text"],
@@ -42,7 +57,7 @@ fieldset {
   padding: 10px 15px;
   margin-bottom: 15px;
   min-width: 400px;
-  max-width: 900px;
+  max-width: 1300px;
 }
 
 legend {
@@ -50,7 +65,9 @@ legend {
   font-weight: bold;
   color: #333;
 }
-
+.seed-row{
+  display: block;
+}
 .buttons {
   display: flex;
   justify-content: center;
@@ -89,7 +106,10 @@ button:active {
     margin-bottom: 5px;
     font-weight: bold;
   }
-
+.seed-row{
+  display: flex;
+  flex-direction: column;
+}
   .field-inline input {
     width: 80%;
     text-align: center;
@@ -118,5 +138,63 @@ button:active {
 
   button {
     width: 50%;
+  }@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm; /* فاصله استاندارد از لبه */
   }
+
+  /* حذف دکمه‌ها و افکت‌ها */
+  .buttons,
+  button {
+    display: none !important;
+  }
+
+  body, .container {
+    background: white !important;
+    color: black !important;
+    font-weight: normal !important;
+    direction: rtl; /* چون فرم فارسیه */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  fieldset, .field-inline, .seed-row, input, label {
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+    font-weight: normal !important;
+    text-align: right;
+    flex-wrap: nowrap !important; /* اجازه خط بعدی برای کراش نشدن */
+    display: flex !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .head {
+    font-weight: normal !important;
+    font-size: 20pt;
+    text-align: center;
+    border: none !important;
+    margin-bottom: 10px;
+  }
+
+  input {
+    max-width: 100% !important; /* مهم: از صفحه خارج نشه */
+    flex: 1 1 auto;
+  }
+
+  label {
+    font-weight: normal !important;
+    width: auto;
+  }
+
+  fieldset {
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+    padding: 5px 0;
+  }
+}
 }
