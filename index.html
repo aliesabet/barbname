@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فرم بارنامه</title>
-  <link rel="stylesheet" href="bar.css">
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      بارنامه 
-    </div>
-    <div class="date">
-      <label for="date">تاریخ :</label>
-      <input type="text"  id="date">
-
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فرم بارنامه</title>
+    <link rel="stylesheet" href="bar.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">بارنامه</div>
+      <div class="date">
+        <label for="date">تاریخ :</label>
+        <input type="text" id="date" />
+      </div>
 
       <fieldset>
         <legend>مشخصات کالا</legend>
         <div class="field-inline goods-field">
           <label for="goods_name">نام کالا:</label>
-          <input type="text" id="goods_name" name="goods_name">
+          <input type="text" id="goods_name" name="goods_name" />
           <label for="goods_code">کد کالا:</label>
-          <input type="text" id="goods_code" name="goods_code">
+          <input type="text" id="goods_code" name="goods_code" />
         </div>
       </fieldset>
 
@@ -33,7 +30,7 @@
           <label>نام فرستنده:</label>
           <strong>محسن ولیجانی</strong>
           <label for="sender_code_melli">کد ملی:</label>
-          <input type="text" id="sender_code_melli" name="sender_code_melli">
+          <input type="text" id="sender_code_melli" name="sender_code_melli" />
           <label>شماره همراه:</label>
           <strong>09171529707</strong>
         </div>
@@ -43,11 +40,15 @@
         <legend>مشخصات گیرنده</legend>
         <div class="field-inline receiver-field">
           <label for="receiver_name">نام گیرنده:</label>
-          <input type="text" id="receiver_name" name="receiver_name">
+          <input type="text" id="receiver_name" name="receiver_name" />
           <label for="receiver_code_melli">کد ملی:</label>
-          <input type="text" id="receiver_code_melli" name="receiver_code_melli">
+          <input
+            type="text"
+            id="receiver_code_melli"
+            name="receiver_code_melli"
+          />
           <label for="receiver_phone">شماره همراه:</label>
-          <input type="text" id="receiver_phone" name="receiver_phone">
+          <input type="text" id="receiver_phone" name="receiver_phone" />
         </div>
       </fieldset>
 
@@ -55,25 +56,29 @@
         <legend>مشخصات راننده</legend>
         <div class="field-inline driver-field">
           <label for="ranande_name">نام راننده:</label>
-          <input type="text" id="ranande_name" name="ranande_name">
+          <input type="text" id="ranande_name" name="ranande_name" />
           <label for="driver_code_melli">کد ملی:</label>
-          <input type="text" id="driver_code_melli" name="driver_code_melli">
+          <input type="text" id="driver_code_melli" name="driver_code_melli" />
           <label for="driver_phone">شماره همراه:</label>
-          <input type="text" id="driver_phone" name="driver_phone">
+          <input type="text" id="driver_phone" name="driver_phone" />
         </div>
       </fieldset>
 
       <fieldset>
         <legend>مشخصات باربری و وسیله نقلیه</legend>
         <div class="field-inline vehicle-field">
-          <label for="barbari_name">نام باربری:</label>
-          <input type="text" id="barbari_name" name="barbari_name">
+          <div class="pair">
+            <label for="barbari_name">نام باربری:</label>
+          <input type="text" id="barbari_name" name="barbari_name" />
           <label for="barname_number">شماره بارنامه:</label>
-          <input type="text" id="barname_number" name="barname_number">
-          <label for="kind_of_vehicle">نوع کامیون:</label>
-          <input type="text" id="kind_of_vehicle" name="kind_of_vehicle">
+          <input type="text" id="barname_number" name="barname_number" />
+          </div>
+          <div class="pair">
+            <label for="kind_of_vehicle">نوع کامیون:</label>
+          <input type="text" id="kind_of_vehicle" name="kind_of_vehicle" />
           <label for="vehicle_number">شماره کامیون:</label>
-          <input type="text" id="vehicle_number" name="vehicle_number">
+          <input type="text" id="vehicle_number" name="vehicle_number" />
+          </div>
         </div>
       </fieldset>
 
@@ -81,57 +86,63 @@
         <legend>مشخصات بذر</legend>
         <div class="seed-row field-inline seed1-field">
           <label>نوع بذر:</label>
-          <input type="text" name="seed_type_1">
+          <input type="text" name="seed_type_1" />
           <label>تعداد کیسه:</label>
-          <input type="text" name="seed_count_1">
+          <input type="text" name="seed_count_1" />
         </div>
         <div class="seed-row field-inline seed2-field">
           <label>نوع بذر:</label>
-          <input type="text" name="seed_type_2">
+          <input type="text" name="seed_type_2" />
           <label>تعداد کیسه:</label>
-          <input type="text" name="seed_count_2">
+          <input type="text" name="seed_count_2" />
         </div>
         <div class="seed-row field-inline seed3-field">
           <label>نوع بذر:</label>
-          <input type="text" name="seed_type_3">
+          <input type="text" name="seed_type_3" />
           <label>تعداد کیسه:</label>
-          <input type="text" name="seed_count_3">
+          <input type="text" name="seed_count_3" />
         </div>
       </fieldset>
 
       <fieldset>
         <legend>مشخصات بارگیری و تخلیه</legend>
         <div class="field-inline loading-field">
-          <label for="weight_start">وزن کالا در محل بارگیری:</label>
-          <input type="text" id="weight_start" name="weight_start">
-          <label for="weight_end">وزن کالا در محل تخلیه:</label>
-          <input type="text" id="weight_end" name="weight_end">
-          <label for="loading_place">محل بارگیری:</label>
-          <input type="text" id="loading_place" name="loading_place">
-          <label for="unloading_place">محل تخلیه:</label>
-          <input type="text" id="unloading_place" name="unloading_place">
+          <div class="pair">
+            <label for="weight_start">وزن کالا در محل بارگیری:</label>
+            <input type="text" id="weight_start" name="weight_start" />
+            <label for="weight_end">وزن کالا در محل تخلیه:</label>
+            <input type="text" id="weight_end" name="weight_end" />
+          </div>
+          <div class="pair">
+            <label for="loading_place">محل بارگیری:</label>
+            <input type="text" id="loading_place" name="loading_place" />
+            <label for="unloading_place">محل تخلیه:</label>
+            <input type="text" id="unloading_place" name="unloading_place" />
+          </div>
         </div>
       </fieldset>
 
       <fieldset>
         <div class="field-inline signature-field">
           <label for="loading_responsible">مسئول بارگیری:</label>
-          <input type="text" id="loading_responsible" name="loading_responsible">
+          <input
+            type="text"
+            id="loading_responsible"
+            name="loading_responsible"
+          />
           <label for="truck_driver">راننده کامیون:</label>
-          <input type="text" id="truck_driver" name="truck_driver">
+          <input type="text" id="truck_driver" name="truck_driver" />
           <label for="goods_receiver">گیرنده کالا:</label>
-          <input type="text" id="goods_receiver" name="goods_receiver">
+          <input type="text" id="goods_receiver" name="goods_receiver" />
         </div>
       </fieldset>
 
-    </form>
-
-    <div class="buttons print">
-      <button>🖨 چاپ فرم</button>
-      <button>📤 اشتراک‌گذاری</button>
+      <div class="buttons print">
+        <button>🖨 چاپ فرم</button>
+        <button>📤 اشتراک‌گذاری</button>
+      </div>
     </div>
-  </div>
 
-  <script src="bar.js"></script>
-</body>
+    <script src="bar.js"></script>
+  </body>
 </html>
