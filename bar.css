@@ -1,3 +1,6 @@
+/* ===================== */
+/* استایل پایه (دسکتاپ) */
+/* ===================== */
 body {
   display: flex;
   justify-content: center;
@@ -7,11 +10,13 @@ body {
   background-color: #f9f9f9;
   font-family: "Vazir", sans-serif;
 }
+
 .header {
   text-align: center;
   margin-bottom: 15px;
   font-weight: bold;
 }
+
 .date {
   font-weight: bold;
 }
@@ -39,15 +44,15 @@ input:focus {
   margin-bottom: 10px;
 }
 
+.field-inline input {
+  max-width: 150px;
+  flex: 1;
+}
+
 .signature-field,
 .loading-field,
 .vehicle-field {
   flex-wrap: nowrap;
-}
-
-.field-inline input {
-  max-width: 150px;
-  flex: 1;
 }
 
 fieldset {
@@ -64,9 +69,11 @@ legend {
   font-weight: bold;
   color: #333;
 }
+
 .seed-row {
   display: block;
 }
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -93,6 +100,10 @@ button:hover {
 button:active {
   transform: translateY(0);
 }
+
+/* ===================== */
+/* استایل موبایل (زیر 950px) */
+/* ===================== */
 @media (max-width: 950px) {
   .field-inline {
     flex-direction: column;
@@ -120,6 +131,7 @@ button:active {
     text-align: center;
   }
 
+  /* بخش‌های ۴ فیلد */
   .signature-field,
   .loading-field,
   .vehicle-field {
@@ -149,6 +161,10 @@ button:active {
     width: 50%;
   }
 }
+
+/* ===================== */
+/* استایل چاپ (Print) */
+/* ===================== */
 @media print {
   @page {
     size: A4 portrait;
@@ -157,8 +173,25 @@ button:active {
 
   body {
     background: white;
+    font-weight: normal !important;
   }
 
+  /* همه بخش‌ها کنار هم (به جز بذرها) */
+  .goods-field,
+  .sender-field,
+  .receiver-field,
+  .driver-field,
+  .vehicle-field,
+  .signature-field {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px;
+    align-items: center;
+    font-weight: normal !important;
+  }
+
+  /* div های داخلی pair */
   .vehicle-field > div.pair,
   .loading-field > div.pair,
   .signature-field > div.pair {
@@ -169,45 +202,40 @@ button:active {
     align-items: center;
   }
 
-  .goods-field,
-  .sender-field,
-  .receiver-field,
-  .driver-field,
-  .signature-field {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap;
-    gap: 10px;
-    align-items: center;
-  }
-
+  /* بذرها زیر هم */
   .seed-row {
     display: block !important;
     margin-bottom: 8px;
+    font-weight: normal !important;
   }
 
   fieldset {
-    border: 1px solid #000;
+    border: none !important; /* حذف کل بردرها */
     padding: 8px 10px;
     margin-bottom: 12px;
   }
 
+  /* زیرخط برای سر تیترها */
   legend {
-    font-weight: bold;
+    font-weight: bolder !important;
     color: #000;
+    padding-bottom: 2px; /* فاصله متن تا خط */
+    margin-bottom: 6px; /* فاصله خط تا بقیه المان‌ها */
   }
 
+  input,
+  label,
+  strong {
+    font-weight: normal !important;
+    border: none !important; /* بردرهای input هم حذف شوند */
+    padding: 4px 6px;
+    width: auto;
+  }
+
+  /* دکمه‌ها مخفی شوند */
   .buttons,
   button {
     display: none !important;
   }
-
-  input {
-    border: 1px solid #aaa;
-    padding: 4px 6px;
-    border-radius: 4px;
-    width: auto;
-  }
 }
-
 
